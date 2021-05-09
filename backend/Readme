@@ -1,0 +1,5 @@
+npm i multer --save //https://github.com/expressjs/multer
+npm i mongoose-unique-validator --save //https://mongoosejs.com/docs/populate.html
+npm i bcrypt --save
+npm i jsonwebtoken --save //https://jwt.io/introduction/
+https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.htmlhttps://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html

@@ -1,0 +1,6 @@
+{
+  "env":{
+    "MONGO_ATLS_PWD" : "GOPYoh48CuR0n77F",
+    "JWT_SECRET_KEY" : "secret_user_key"
+  }
+}

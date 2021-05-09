@@ -1,0 +1,30 @@
+<mat-spinner *ngIf="isLoading;else saveForm"></mat-spinner>
+
+<ng-template #saveForm>
+  <mat-card>
+    <form [formGroup]="this.posts" (ngSubmit)="savePost()">
+
+      <mat-form-field class="w-100">
+        <input type="text" formControlName="title" matInput>
+        <mat-error *ngIf="this.posts.controls['title'].errors">please enter title</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100">
+          <textarea rows="6" formControlName="post" matInput></textarea>
+          <mat-error *ngIf="this.posts.controls['post'].errors">please enter post</mat-error>
+      </mat-form-field>
+
+      <div class="mb-4">
+        <input type="button" mat-stroked-button (click)="filePicker.click()" value="upload image">
+        <input type="file" (change)="uploadImage($event)" #filePicker >
+      </div>
+
+      <div class="image-preview" *ngIf="imagePreview && this.posts.get('image').valid">
+        <img [src]="imagePreview" [alt]="this.posts.controls.title.value">
+      </div>
+      <mat-error class="mb-1" *ngIf="imagePreview && this.posts.controls['image'].errors">invalid image</mat-error>
+      <button type="submit" mat-raised-button	color="accent" [disabled]="this.posts.invalid">{{postType}}</button>
+    </form>
+  </mat-card>
+</ng-template>
+

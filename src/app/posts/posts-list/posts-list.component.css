@@ -1,0 +1,16 @@
+:host{
+  display: block;
+  margin-top: 1rem;
+}
+
+.mat-spinner{
+  margin:auto
+}
+
+.post-img{
+  width : 20%
+}
+
+.post-img img{
+  width : 100%
+}

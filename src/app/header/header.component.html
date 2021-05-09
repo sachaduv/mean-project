@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <span><a routerLink='/'>{{header}}</a></span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="authStatus">
+      <span><a routerLink='/create' mat-button routerLinkActive="mat-accent">Create Post</a></span>
+    </li>
+    <li *ngIf="!authStatus">
+      <span><a routerLink='/auth/login' mat-button routerLinkActive="mat-accent">Login</a></span>
+    </li>
+    <li *ngIf="!authStatus">
+      <span><a routerLink='/auth/signup' mat-button routerLinkActive="mat-accent">SignUp</a></span>
+    </li>
+    <li *ngIf="authStatus">
+      <button mat-button (click)="onLogOut()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
